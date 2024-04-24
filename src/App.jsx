@@ -6,7 +6,7 @@ import JobsPage from './pages/JobsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import JobPage, {jobLoader} from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
-
+import EditJobPage from './pages/EditJobPage';
 
 
 
@@ -48,11 +48,11 @@ const App = () => {
         <Route path='/jobs' element = {<JobsPage />} />
         <Route path='/jobs/:id' element = {<JobPage />} loader = {jobLoader}/>
         <Route path='/add-job' element = {<AddJobPage addJobSubmit={addJob}/>} />
-        {/* <Route
+        <Route
           path='/edit-job/:id'
           element={<EditJobPage updateJobSubmit={updateJob} />}
           loader={jobLoader}
-        /> */}
+        />
         <Route
           path='/jobs/:id'
           element={<JobPage deleteJob={deleteJob} />}
